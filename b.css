@@ -1,0 +1,222 @@
+#color-box {
+  background-color: #a23cff;
+  width: 40%; /* Ancho de la caja, ajusta según tus necesidades */
+  height: 90vh; /* Altura de la caja igual a la altura de la ventana */
+  position: fixed; /* Fijar la caja en la posición */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Colocar la caja detrás del contenido */
+  border-bottom-left-radius: 90%; /* Extremo inferior izquierdo más curvado */
+  border-bottom-right-radius: 90%; /* Extremo inferior derecho más curvado */
+}
+
+/* Estilos para el contenido principal */
+body {
+  margin-left: 30%; /* Alinea el contenido a la derecha de la caja de color */
+  padding: 20px;
+  max-width: 70%; /* Añade espacio entre el contenido y el borde de la ventana */
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  width: 310px;
+  height: 540px;
+  border: 15px solid #fff; 
+  background-color: #000;
+  border-radius: 20px;
+  position: fixed; /* Fija la posición del teléfono */
+  top: 30px; /* Ajusta la posición vertical para que esté ligeramente superpuesto */
+  left: 280px; /* Ajusta la posición horizontal para que esté ligeramente superpuesto */
+  z-index: 2; /* Asegura que el teléfono esté por encima de la caja de color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.screen {
+  background-color: #fff;
+  width: 100%;
+  height: 90%;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info {
+  padding: 140px; /* Espacio de relleno */
+  text-align: center;
+  margin-left: 200px;
+}
+
+h1, p {
+  margin: 10px;
+  
+}
+
+h1 {
+  font-size: 34px;
+  color:#3f2956;
+}
+
+p {
+  font-size: 16px;
+  color: #dfdee0;
+}
+
+/* Estilos para la parte superior del teléfono */
+.user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #a23cff;
+  color: #fff;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden; 
+  border: 2px solid #fff;
+  /* Puedes agregar una imagen de perfil aquí o estilizarla con CSS */
+}
+
+.user-image img {
+  width: 100%; /* Asegura que la imagen llene el contenedor */
+  height: 100%; /* Asegura que la imagen llene el contenedor */
+  object-fit: cover;
+   /* Escala la imagen para ajustarla al círculo sin distorsión */
+}
+
+.user-details {
+  flex-grow: 1;
+  border-radius: 80px;
+  margin-left: 10px;
+}
+.user-name {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.user-status {
+  margin: 0;
+  font-size: 10px; /* Tamaño de fuente más pequeño para el estado */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.options::before,
+.options::after {
+  content: "•"; /* Utilizamos el carácter "•" (punto medio) como los puntos */
+  color: #fff; /* Color de los puntos */
+  font-size: 15px; /* Tamaño de fuente de los puntos */
+  line-height: 0.5; /* Alinea verticalmente los puntos más cerca */
+}
+
+/* Estilos para la flecha de retroceso */
+.back-arrow {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.back-arrow::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #fff transparent transparent;
+  top: 0;
+  right: 5px; /* Ajustamos la distancia entre la flecha y la imagen */
+}
+
+/* Estilos para la entrada de mensaje */
+.message-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Espacio superior entre el contenido del chat y la entrada de mensaje */
+  position: relative;
+  width: 80%; /* Posición relativa para el botón */
+}
+
+.message-input input {
+  flex: 2; /* Aumenta el ancho del campo de entrada */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Bordes redondeados */
+}
+
+.send-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%; /* Centrar verticalmente el botón en el contenedor */
+  right: 10px; /* Alinear el botón en el borde derecho */
+  transform: translateY(-50%); /* Alinear verticalmente el botón */
+  width: 30px; /* Tamaño del botón */
+  height: 30px;
+  cursor: pointer;
+}
+
+.arrow-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #3c2250;
+  border-radius: 50%; /* Bordes redondeados para el círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-line {
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg); /* Rotar en un ángulo de 45 grados */
+}
+
+.arrow-line2 {
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(-45deg); /* Rotar en un ángulo de 45 grados */
+}
+
+.user-message {
+  background-color: #ede5f4; /* Color de fondo del mensaje del usuario */
+  color: #b997cb; /* Color del texto del mensaje del usuario */
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%; /* Ancho máximo del mensaje del usuario */
+  margin-right: auto; /* Alinear el mensaje del usuario a la derecha */
+  margin-bottom: 10px; /* Espacio entre mensajes */
+}
+
+
+.other-message {
+  background-color: #fffffe; /* Color de fondo del mensaje del otro usuario */
+  color: #000; /* Color del texto del mensaje del otro usuario */
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%; /* Ancho máximo del mensaje del otro usuario */
+  margin-left: auto; /* Alinear el mensaje del otro usuario a la izquierda */
+  margin-bottom: 10px; /* Espacio entre mensajes */
+}
+
